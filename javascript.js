@@ -3,7 +3,12 @@ console.log(container);
 
 const rows = document.createElement('div');
 rows.className = ('rows');
+console.log(rows);
+
+container.appendChild(rows);
+
 const columns = document.createElement('div');
 columns.className = ('columns');
+console.log(columns);
 
-document.getElementById("container").appendChild(rows, columns);
+container.appendChild(columns);
