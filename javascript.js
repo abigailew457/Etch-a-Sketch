@@ -1,14 +1,18 @@
 const container = document.querySelector('#container');
 console.log(container);
 
-const rows = document.createElement('div');
-rows.className = ('rows');
-console.log(rows);
 
-container.appendChild(rows);
+function makeRows(rows, cells) {
+    container.style.setProperty('--grid-rows', rows);
+    container.style.setProperty('--grid-cells', cells);
 
-const columns = document.createElement('div');
-columns.className = ('columns');
-console.log(columns);
+    for (i = 0; i < (rows * cells); i++) {
+          let cell = document.createElement('div');
+          cell.classList.add('cell');
+          container.appendChild(cell);
+        };
+};
+makeRows(16, 16);
 
-container.appendChild(columns);
+
+console.log(defaultGrid);
