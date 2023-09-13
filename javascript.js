@@ -22,5 +22,5 @@ makeRows(16, 16);
 
 var randomColor = Math.floor(Math.random()*16777215).toString(16);
 
-
-console.log(makeRows);
+const textCont = document.querySelector('#txtContainer');
+console.log(textCont);
