@@ -1,6 +1,12 @@
 const container = document.querySelector('#container');
 console.log(container);
+const textCont = document.querySelector('#txtContainer');
+console.log(textCont);
 
+const btn = document.createElement('button');
+btn.classList.add('btn')
+btn.textContent = 'Refresh';
+textCont.appendChild(btn);
 
 function makeRows(rows, cells) {
     container.style.setProperty('--grid-rows', rows);
@@ -15,17 +21,17 @@ function makeRows(rows, cells) {
         function colorChange() {
             cell.style.backgroundColor = randomColor;
         };
-    
+        
+        btn.addEventListener("click", reset);
+        function reset() {
+            window.location.reload();
+        } 
 }
 };
+
 makeRows(16, 16);
+
 
 var randomColor = Math.floor(Math.random()*16777215).toString(16);
 
-const textCont = document.querySelector('#txtContainer');
-console.log(textCont);
 
-const btn = document.createElement('button');
-btn.classList.add('btn')
-btn.textContent = 'Click Me!';
-textCont.appendChild(btn);
