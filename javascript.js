@@ -24,3 +24,8 @@ var randomColor = Math.floor(Math.random()*16777215).toString(16);
 
 const textCont = document.querySelector('#txtContainer');
 console.log(textCont);
+
+const btn = document.createElement('button');
+btn.classList.add('btn')
+btn.textContent = 'Click Me!';
+textCont.appendChild(btn);
