@@ -12,3 +12,8 @@
     padding: 1em;
     border: 1px solid #E8177C;
 }
+
+#txtContainer {
+    margin: auto;
+    width: 5%;
+}
