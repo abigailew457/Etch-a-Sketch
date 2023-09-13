@@ -7,19 +7,20 @@ function makeRows(rows, cells) {
     container.style.setProperty('--grid-cells', cells);
 
     for (i = 0; i < (rows * cells); i++) {
-          let cell = document.createElement('div');
-          cell.classList.add('cell');
-          container.appendChild(cell);
+        let cell = document.createElement('div');
+        cell.classList.add('cell');
+        container.appendChild(cell);
           
-          cell.addEventListener("mouseover", colorChange);
+        cell.addEventListener("mouseover", colorChange);
         function colorChange() {
-        cell.style.backgroundColor = '#E8177C';
+            cell.style.backgroundColor = randomColor;
         };
     
 }
 };
 makeRows(16, 16);
 
+var randomColor = Math.floor(Math.random()*16777215).toString(16);
 
 
 console.log(makeRows);
