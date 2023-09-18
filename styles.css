@@ -3,13 +3,12 @@
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cells), 1fr);
     border: 1px solid #E8177C;
-    width: 960px;
-    height: 960px;
+    width: 1000px;
+    height: 1000px;
     margin: auto;
 }
 
 .cell {
-    padding: 1em;
     border: 1px solid #E8177C;
 }
 
